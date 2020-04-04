@@ -1,0 +1,14 @@
+---
+- name: "Play 1: Capture and store aaa config"
+  hosts: switches
+  connection: network_cli
+  tasks:
+    - name: "Task 1: Get aaa config from switches"
+      ios_command:
+        commands: "show run aaa"
+      register: cli_result
+
+    - name: "Task 2: Print aaa output"
+      debug:
+        msg: "{{ cli_result }}"
+
