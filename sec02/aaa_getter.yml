@@ -12,3 +12,14 @@
       debug:
         msg: "{{ cli_result.stdout_lines[0] }}"
 
+    - name: "Task 3: Create outputs/ folder"
+      file:
+        path: "outputs"
+        state: directory
+      run_once: true
+
+    - name: "Taksk 4: Write output to file"
+      copy:
+        content: "{{ cli_result.stdout[0] }}\n"
+        dest: "outputs/{{ inventory_hostname }}.txt"
+

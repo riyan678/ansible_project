@@ -1,7 +1,7 @@
 ---
 ansible_network_os: "ios"
-ansible_user: "username"
-ansible_password: "password"
-ansible_become: "yes"
+ansible_user: "ryangorden"
+ansible_password: "S*nakes876=0"
+become: "yes"
 ansible_become_method: "enable"
-absible_become_password: "secret"
+absible_become_password: "LC+C$"
