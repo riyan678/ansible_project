@@ -1,0 +1,6 @@
+---
+bbb:
+  - method_list: "default"
+    group: "DEVICE-ADMINISTRATION"
+    group2: "local"
+...

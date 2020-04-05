@@ -1,0 +1,7 @@
+---
+ansible_network_os: "ios"
+ansible_user: "username"
+ansible_password: "password"
+become: "yes"
+ansible_become_method: "enable"
+absible_become_password: "secret"

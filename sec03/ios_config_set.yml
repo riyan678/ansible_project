@@ -1,0 +1,17 @@
+---
+- name: "Play 1: Mangage aaa with ios_config and jinja2"
+  hosts: routers
+  connection: network_cli
+  tasks:
+    - name: "Task 1: Apply ios aaa config via ssh/cli"
+      ios_config:
+        src: "templates/aaa.j2"
+        save_when: changed
+      notify: config_changed
+      register: cli_result
+
+  handlers:
+    - name: "handler 1: display relevant changes"
+      listen: config_changed
+      debug:
+        msg: "{{ cli_result.commands }}"
